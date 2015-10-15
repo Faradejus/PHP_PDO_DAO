@@ -82,7 +82,8 @@
 
 
         public function bind($para, $value) {
-            $this->parameters[sizeof($this->parameters)] = ":" . $para . "\x7F" . utf8_encode($value);
+            //$this->parameters[sizeof($this->parameters)] = ":" . $para . "\x7F" . utf8_encode($value);
+			$this->parameters[sizeof($this->parameters)] = ":" . $para . "\x7F" . $value;
         }
 
         public function bindMore($parray) {
